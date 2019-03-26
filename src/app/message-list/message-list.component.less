@@ -1,0 +1,93 @@
+.message-list {
+  display: grid;
+  width: 99%;
+  grid-gap: 10px;
+  margin-bottom: 2em;
+}
+
+@media screen and (min-width: 790px) {
+  .message-list {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media screen and (max-width: 789px) {
+  .message-list {
+    grid-template-columns: 100%;
+  }
+}
+
+.message {
+  background: white;
+  padding: 10px 20px;
+  font-size: large;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+.message > .description {
+}
+.message > .score {
+  display: block;
+  min-width: 40px;
+  min-height: 40px;
+  background-size: 100%;
+}
+
+.in-progress {
+  background-color: #008FEF;
+}
+.in-progress > .score {
+  background-image: url('../../assets/img/emoji/in-progress.png');
+}
+.best {
+  background-color: #01cc49;
+}
+.best > .score {
+  background-image: url('../../assets/img/emoji/best.png');
+}
+.great {
+  background-color: #5dcc7c;
+}
+.great > .score {
+  background-image: url('../../assets/img/emoji/great.png');
+}
+.good {
+  background-color: #86cc94;
+}
+.good > .score {
+  background-image: url('../../assets/img/emoji/good.png');
+}
+.ok {
+  background-color: #bdcb2b;
+}
+.ok > .score {
+  background-image: url('../../assets/img/emoji/ok.png');
+}
+.poor {
+  background-color: #cbc942;
+}
+.poor > .score {
+  background-image: url('../../assets/img/emoji/poor.png');
+}
+.bad {
+  background-color: #cb964c;
+}
+.bad > .score {
+  background-image: url('../../assets/img/emoji/bad.png');
+}
+.very-bad {
+  background-color: #cb7147;
+}
+.very-bad > .score {
+  background-image: url('../../assets/img/emoji/very-bad.png');
+}
+.abysmal {
+  background-color: #cb4138;
+}
+.abysmal > .score {
+  background-image: url('../../assets/img/emoji/abysmal.png');
+}

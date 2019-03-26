@@ -1,0 +1,18 @@
+<div class="message-list">
+  <div *ngFor="let message of messages  | async"
+       class="message"
+       [ngClass]="{
+                    'in-progress': message.score === undefined,
+                    'best': message.score >= 0.75,
+                    'great': message.score < 0.75 && message.score >= 0.5,
+                    'good': message.score < 0.5 && message.score >= 0.25,
+                    'ok': message.score < 0.25 && message.score >= 0,
+                    'poor': message.score < 0 && message.score >= -0.25,
+                    'bad': message.score < -0.25 && message.score >= -0.5,
+                    'very-bad': message.score < -0.5 && message.score >= -0.75,
+                    'abysmal': message.score < -0.75
+  }">
+    <div class="description">{{ message.descr }}</div>
+    <div class="score"></div>
+  </div>
+</div>
